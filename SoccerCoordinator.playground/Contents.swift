@@ -51,16 +51,6 @@ let playerNameAndExperience: [String:String] =
      "Les Clay":"YES",
      "Herschel Krustofski":"YES"]
 
-//dictionary containing Team name and date and time for first practice
-let practiceDates: [String:String] = [
-    "Sharks":"March 17, 3Ppm",
-    "Dragons":"March 17, 1pm",
-    "Raptors":"March 18, 1pm"
-]
-
-//This array stores the team names
-let teams: [String] = ["Sharks", "Raptors", "Dragons"]
-
 //This for loop separates the total number of experienced and inexperienced players.
 for (playerName, playerExperience) in playerNameAndExperience
 {
@@ -86,7 +76,6 @@ var totalInexperiencedPerTeam = totalYesCount/numberOfTeams // Stores the total 
 
 //---------------- END VARIABLE DECLARATION---------------------\\
 
-//-------------- MAIN BODY OF PROGRAM -----------------------\\
 
 // This function sends the letter to the parents.
 func sendLetter (parentName: String, childName: String, dateAndTime: String, teamName: String)
@@ -165,7 +154,7 @@ for (guardianName, playerName) in parents
     
     if Sharks.contains(playerName)
     {
-        print("To \(playerName)'s parents:")
+        print("Letter to \(playerName)'s parents:")
         sendLetter(guardianName, childName: playerName, dateAndTime: "March 17, 3pm", teamName: "Sharks")
         print("\n")
         
@@ -173,7 +162,7 @@ for (guardianName, playerName) in parents
     else if Raptors.contains(playerName)
     {
         
-        print("To \(playerName)'s parents:")
+        print("Letter to \(playerName)'s parents:")
         sendLetter(guardianName, childName: playerName, dateAndTime: "March 18, 1pm", teamName: "Raptors")
         print("\n")
         
@@ -181,16 +170,16 @@ for (guardianName, playerName) in parents
     else if Dragons.contains(playerName)
     {
         
-        print("To \(playerName)'s parents:")
+        print("Letter to \(playerName)'s parents:")
         sendLetter(guardianName, childName: playerName, dateAndTime: "March 17, 1pm", teamName: "Dragons")
         print("\n")
         
     }
     
-    print("Total letters sent: \(parents.count)")
+   
 }
 
-
+print("Total letters sent: \(parents.count)")
 
 
 
